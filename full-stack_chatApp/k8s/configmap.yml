@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatapp-configmap
+  namespace: chat-app
+data:
+  MONGODB_URI: "mongodb://root:admin@mongodb-service:27017/chatApp?authSource=admin&retryWrites=true&w=majority"
+  JWT_SECRET: "your_jwt_secret_key"
+  PORT: "5001"
+  NODE_ENV: "production"
+  MONGO_INITDB_ROOT_USERNAME: root
+  MONGO_INITDB_ROOT_PASSWORD: admin
